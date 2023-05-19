@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RatingFragment">
+
+    <TextView
+        android:id="@+id/tv_Rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="150dp"
+        android:text="RATING"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/fl_Star"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Rating">
+
+        <ImageView
+            android:id="@+id/iv_one"
+            android:layout_width="60dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_star_border_24_yellow" />
+
+        <ImageView
+            android:id="@+id/iv_two"
+            android:layout_width="60dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_star_border_24_yellow" />
+        <ImageView
+            android:id="@+id/iv_three"
+            android:layout_width="60dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_star_border_24_yellow" />
+        <ImageView
+            android:id="@+id/iv_four"
+            android:layout_width="60dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_star_border_24_yellow" />
+        <ImageView
+            android:id="@+id/iv_five"
+            android:layout_width="60dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_star_border_24_yellow" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/sw_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berikan Tips?     "
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_Star" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_tips" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
