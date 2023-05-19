@@ -30,32 +30,32 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_Rating">
 
         <ImageView
-            android:id="@+id/iv_one"
+            android:id="@+id/iv_1"
             android:layout_width="60dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:src="@drawable/baseline_star_border_24_yellow" />
 
         <ImageView
-            android:id="@+id/iv_two"
+            android:id="@+id/iv_2"
             android:layout_width="60dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:src="@drawable/baseline_star_border_24_yellow" />
         <ImageView
-            android:id="@+id/iv_three"
+            android:id="@+id/iv_3"
             android:layout_width="60dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:src="@drawable/baseline_star_border_24_yellow" />
         <ImageView
-            android:id="@+id/iv_four"
+            android:id="@+id/iv_4"
             android:layout_width="60dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:src="@drawable/baseline_star_border_24_yellow" />
         <ImageView
-            android:id="@+id/iv_five"
+            android:id="@+id/iv_5"
             android:layout_width="60dp"
             android:layout_height="75dp"
             android:layout_weight="1"

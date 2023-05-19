@@ -31,54 +31,29 @@ class RatingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             btnSubmit.isVisible = false
-            ivFive.setOnClickListener {
-                ivOne.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivTwo.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivThree.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivFour.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivFive.setImageResource(R.drawable.baseline_star_24_yellow)
+            iv5.setOnClickListener {
                 star = 5
-                btnSubmit.isVisible = true
+                clickStar(star)
             }
 
-            ivFour.setOnClickListener {
-                ivOne.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivTwo.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivThree.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivFour.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivFive.setImageResource(R.drawable.baseline_star_border_24_yellow)
+            iv4.setOnClickListener {
                 star = 4
-                btnSubmit.isVisible = true
+                clickStar(star)
             }
 
-            ivThree.setOnClickListener {
-                ivOne.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivTwo.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivThree.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivFour.setImageResource(R.drawable.baseline_star_border_24_yellow)
-                ivFive.setImageResource(R.drawable.baseline_star_border_24_yellow)
+            iv3.setOnClickListener {
                 star = 3
-                btnSubmit.isVisible = true
+                clickStar(star)
             }
 
-            ivTwo.setOnClickListener {
-                ivOne.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivTwo.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivThree.setImageResource(R.drawable.baseline_star_border_24_yellow)
-                ivFour.setImageResource(R.drawable.baseline_star_border_24_yellow)
-                ivFive.setImageResource(R.drawable.baseline_star_border_24_yellow)
+            iv2.setOnClickListener {
                 star = 2
-                btnSubmit.isVisible = true
+                clickStar(star)
             }
 
-            ivOne.setOnClickListener {
-                ivOne.setImageResource(R.drawable.baseline_star_24_yellow)
-                ivTwo.setImageResource(R.drawable.baseline_star_border_24_yellow)
-                ivThree.setImageResource(R.drawable.baseline_star_border_24_yellow)
-                ivFour.setImageResource(R.drawable.baseline_star_border_24_yellow)
-                ivFive.setImageResource(R.drawable.baseline_star_border_24_yellow)
+            iv1.setOnClickListener {
                 star = 1
-                btnSubmit.isVisible = true
+                clickStar(star)
             }
 
             btnSubmit.setOnClickListener {
@@ -89,6 +64,32 @@ class RatingFragment : Fragment() {
                 }
             }
         }
+    }
+
+    fun clickStar(jmlh:Int){
+        binding.apply {
+            for (i in 1..5){
+                when (i){
+                    1 -> iv1.setImageResource(R.drawable.baseline_star_border_24_yellow)
+                    2 -> iv2.setImageResource(R.drawable.baseline_star_border_24_yellow)
+                    3 -> iv3.setImageResource(R.drawable.baseline_star_border_24_yellow)
+                    4 -> iv4.setImageResource(R.drawable.baseline_star_border_24_yellow)
+                    5 -> iv5.setImageResource(R.drawable.baseline_star_border_24_yellow)
+                }
+            }
+            for (i in 1..jmlh){
+                when (i){
+                    1 -> iv1.setImageResource(R.drawable.baseline_star_24_yellow)
+                    2 -> iv2.setImageResource(R.drawable.baseline_star_24_yellow)
+                    3 -> iv3.setImageResource(R.drawable.baseline_star_24_yellow)
+                    4 -> iv4.setImageResource(R.drawable.baseline_star_24_yellow)
+                    5 -> iv5.setImageResource(R.drawable.baseline_star_24_yellow)
+                }
+            }
+
+            btnSubmit.isVisible = true
+        }
+
     }
 
     companion object {
